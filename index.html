@@ -14,7 +14,7 @@
 <body>
     
     <section class="container-fluid d-flex flex-column align-items-center justify-content-center ms__fluid" id="root">
-        <h2 class="text-white text-uppercase py-2"><i class="fa-brands fa-vuejs"></i> Slider</h2>
+        <h2 class="text-white text-uppercase py-2"><i class="fa-brands fa-vuejs"></i> {{title}}</h2>
         <div class="ms__container">
             <div class="row">
                 <div class="col-10 p-0 ms__slider_wrapper">
@@ -23,15 +23,19 @@
                     :class="sliderClass"
                     v-for="slider in arrayObject"
                     >
+
                         <img :src="slider.immagine" :alt="slider.titolo">
+
                     </div>
 
                     <div
                     :class="descriptionClass"
                     v-for="description in arrayObject"
                     >
+
                         <h2>{{description.titolo}}</h2>
                         <p>{{description.descrizione}}</p>
+
                     </div>
                     
                 </div>
@@ -41,7 +45,9 @@
                     :class="itemClass"
                     v-for="items in arrayObject"
                     >
-                    <img :src="items.immagine" :alt="items.titolo">
+
+                        <img :src="items.immagine" :alt="items.titolo">
+                        
                     </div>
 
                     <div class="button_wrapper d-flex flex-column justify-content-between align-items-center py-3 fs-3">

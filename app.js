@@ -5,6 +5,7 @@ console.log('Hello Vue!');
 const app = new Vue({
     el: '#root',
     data: {
+        title: 'slider',
         sliderClass: 'slider',
         descriptionClass: 'descrizione',
         itemClass: 'item',
