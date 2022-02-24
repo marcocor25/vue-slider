@@ -18,20 +18,28 @@
         <div class="ms__container">
             <div class="row">
                 <div class="col-10 p-0 ms__slider_wrapper">
+
                     <div
                     :class="sliderClass"
                     v-for="slider in arrayObject"
-                    ><img :src="slider.immagine" :alt="slider.titolo"></div>
+                    >
+                    <img :src="slider.immagine" :alt="slider.titolo">
+                    </div>
+
                 </div>
                 <div class="col-2 p-0 ms__item_wrapper">
+
                     <div
                     :class="itemClass"
                     v-for="items in arrayObject"
-                    ></div>
+                    ><img :src="items.immagine" :alt="items.titolo">
+                    </div>
+
                     <div class="button_wrapper d-flex flex-column justify-content-between align-items-center py-3 fs-3">
                         <i class="fa-solid fa-circle-chevron-up" id="chevron-up"></i>
                         <i class="fa-solid fa-circle-chevron-down" id="chevron-down"></i>
                     </div>
+
                 </div>
             </div>
         </div>
