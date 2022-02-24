@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/icon.png">
     <title>Vue-Slider</title>
@@ -20,18 +20,17 @@
                 <div class="col-10 p-0 ms__slider_wrapper">
 
                     <div
-                    :class="sliderClass"
-                    v-for="slider in arrayObject"
-                    >
+                    :class="[sliderClass, currentIndex == index ? 'active' : '']"
+                    v-for="(slider, index) in arrayObject">
 
+                        <div :class="overlayClass"></div>
                         <img :src="slider.immagine" :alt="slider.titolo">
 
                     </div>
 
                     <div
-                    :class="descriptionClass"
-                    v-for="description in arrayObject"
-                    >
+                    :class="[descriptionClass, currentIndex == index ? 'active' : '']"
+                    v-for="(description, index) in arrayObject">
 
                         <h2>{{description.titolo}}</h2>
                         <p>{{description.descrizione}}</p>
@@ -42,17 +41,16 @@
                 <div class="col-2 p-0 ms__item_wrapper">
 
                     <div
-                    :class="itemClass"
-                    v-for="items in arrayObject"
-                    >
+                    :class="[itemClass, currentIndex == index ? 'active' : '']"
+                    v-for="(items, index) in arrayObject">
 
                         <img :src="items.immagine" :alt="items.titolo">
-                        
+
                     </div>
 
                     <div class="button_wrapper d-flex flex-column justify-content-between align-items-center py-3 fs-3">
-                        <i class="fa-solid fa-circle-chevron-up" id="chevron-up"></i>
-                        <i class="fa-solid fa-circle-chevron-down" id="chevron-down"></i>
+                        <i @click="prev" class="fa-solid fa-circle-chevron-up" id="chevron-up"></i>
+                        <i @click="next" class="fa-solid fa-circle-chevron-down" id="chevron-down"></i>
                     </div>
 
                 </div>

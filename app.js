@@ -8,35 +8,58 @@ const app = new Vue({
         title: 'slider',
         sliderClass: 'slider',
         descriptionClass: 'descrizione',
+        overlayClass: 'overlay',
         itemClass: 'item',
+        currentIndex: 0,
         arrayObject: [
             {
-                titolo: 'Svezia',
-                immagine: 'img/01.jpg',
-                descrizione: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+                titolo: 'Madrid',
+                immagine: 'img/01.jpeg',
+                descrizione: 'Capitale della Spagna.',
             },
             {
-                // titolo: 'Svizzera',
-                immagine: 'img/02.jpg',
-                // descrizione: 'Lorem ipsum',
+                titolo: 'Londra',
+                immagine: 'img/02.jpeg',
+                descrizione: 'Capitale del Regno Unito.',
             },
             {
-                // titolo: 'Gran Bretagna',
-                immagine: 'img/03.jpg',
-                // descrizione: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+                titolo: 'Milano',
+                immagine: 'img/03.jpeg',
+                descrizione: 'Capitale economica e della moda italiana.',
             },
             {
-                // titolo: 'Germania',
-                immagine: 'img/04.jpg',
-                // descrizione: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+                titolo: 'Palermo',
+                immagine: 'img/04.jpeg',
+                descrizione: 'Capitale italiana della cultura e dello street food.',
             },
             {
-                // titolo: 'Paradise',
-                immagine: 'img/05.jpg',
-                // descrizione: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+                titolo: 'Parigi',
+                immagine: 'img/05.jpeg',
+                descrizione: 'Capitale della Francia.',
             },
         ],
     },
+    methods: {
+
+        // FUNZIONE CHEVRON-DOWN
+        next: function(){
+            if (this.currentIndex !== this.arrayObject.length -1) {
+                this.currentIndex ++
+            } else {
+                this.currentIndex = 0
+            }
+        },
+
+        // FUNZIONE CHEVRON-UP
+        prev: function(){
+            if (this.currentIndex !== 0) {
+                this.currentIndex --
+            } else {
+                this.currentIndex = this.arrayObject.length -1
+            }
+        },
+    }
+    
 });
 
 console.log(app);
