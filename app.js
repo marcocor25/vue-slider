@@ -6,6 +6,7 @@ const app = new Vue({
     el: '#root',
     data: {
         sliderClass: 'slider',
+        descriptionClass: 'descrizione',
         itemClass: 'item',
         arrayObject: [
             {
@@ -14,24 +15,24 @@ const app = new Vue({
                 descrizione: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
             },
             {
-                titolo: 'Svizzera',
+                // titolo: 'Svizzera',
                 immagine: 'img/02.jpg',
-                descrizione: 'Lorem ipsum',
+                // descrizione: 'Lorem ipsum',
             },
             {
-                titolo: 'Gran Bretagna',
+                // titolo: 'Gran Bretagna',
                 immagine: 'img/03.jpg',
-                descrizione: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+                // descrizione: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
             },
             {
-                titolo: 'Germania',
+                // titolo: 'Germania',
                 immagine: 'img/04.jpg',
-                descrizione: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+                // descrizione: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
             },
             {
-                titolo: 'Paradise',
+                // titolo: 'Paradise',
                 immagine: 'img/05.jpg',
-                descrizione: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+                // descrizione: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
             },
         ],
     },

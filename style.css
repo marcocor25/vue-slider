@@ -25,6 +25,7 @@ img {
 }
 
 .ms__slider_wrapper {
+    position: relative;
     border-right: 1px solid #333;
 }
 
@@ -34,6 +35,17 @@ img {
 
 .slider {
     height: 100%;
+}
+
+.descrizione {
+    width: 80%;
+    text-align: end;
+    font-weight: lighter;
+    filter: drop-shadow(5px 5px 3px black);
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
 }
 
 .item {

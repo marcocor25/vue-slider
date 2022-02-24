@@ -23,16 +23,25 @@
                     :class="sliderClass"
                     v-for="slider in arrayObject"
                     >
-                    <img :src="slider.immagine" :alt="slider.titolo">
+                        <img :src="slider.immagine" :alt="slider.titolo">
                     </div>
 
+                    <div
+                    :class="descriptionClass"
+                    v-for="description in arrayObject"
+                    >
+                        <h2>{{description.titolo}}</h2>
+                        <p>{{description.descrizione}}</p>
+                    </div>
+                    
                 </div>
                 <div class="col-2 p-0 ms__item_wrapper">
 
                     <div
                     :class="itemClass"
                     v-for="items in arrayObject"
-                    ><img :src="items.immagine" :alt="items.titolo">
+                    >
+                    <img :src="items.immagine" :alt="items.titolo">
                     </div>
 
                     <div class="button_wrapper d-flex flex-column justify-content-between align-items-center py-3 fs-3">
